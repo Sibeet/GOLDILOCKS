@@ -1,3 +1,6 @@
+//LengthTest.java
+//DBMS 내부에 정해진 Literal 등의 한계 길이를 반환한다.
+
 import java.sql.*;
 import javax.sql.*;
 

@@ -1,3 +1,6 @@
+//getSchemas.java
+//DBMS의 스키마 목록을 순차적으로 불러온다.
+
 import java.sql.*;
 import javax.sql.*;
 import sunje.goldilocks.jdbc.*;

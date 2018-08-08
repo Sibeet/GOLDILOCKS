@@ -1,11 +1,14 @@
+//getUpdateCount.java
+//해당 쿼리문의 Update, Insert 여부와 갱신된 Row 수를 반환. 그 외 쿼리는 -1로 표시된다.
+
 import java.sql.*;
 import javax.sql.*;
 
 public class getUpdateCount
 {
     protected static final String GOLDILOCKS_DRIVER_CLASS = "sunje.goldilocks.jdbc.GoldilocksDriver";
-    protected static final String URL_BASIC = "jdbc:goldilocks://192.168.0.120:48900/test";
-    protected static final String URL_NAMED = "jdbc:goldilocks://192.168.0.120:48900/test?program=MySample";
+    protected static final String URL_BASIC = "jdbc:goldilocks://127.0.0.1:48900/test";
+    protected static final String URL_NAMED = "jdbc:goldilocks://127.0.0.1:48900/test?program=MySample";
     protected static final String URL_FOR_DEBUGGING = URL_BASIC + "?global_logger=console&trace_log=on&query_log=on&protocol_log=on";
 
     public static Connection createConnectionByDriverManager(String id, String password) throws SQLException
@@ -26,7 +29,7 @@ public class getUpdateCount
         sunje.goldilocks.jdbc.GoldilocksDataSource sDataSource = new sunje.goldilocks.jdbc.GoldilocksDataSource();
         
         sDataSource.setDatabaseName("test");
-        sDataSource.setServerName("192.168.0.120");
+        sDataSource.setServerName("127.0.0.1");
         sDataSource.setPortNumber(48900);
         sDataSource.setUser(id);
         sDataSource.setPassword(password);
@@ -67,12 +70,7 @@ public class getUpdateCount
 	i = stmt.getUpdateCount();
 	System.out.println("drop Count : "+i);
 
-
-
 	stmt.close();
-
-	i = stmt.getUpdateCount();
-	System.out.println("Update Count : "+i);
 	con.close();
     }
 }

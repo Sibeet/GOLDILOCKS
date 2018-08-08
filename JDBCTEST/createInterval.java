@@ -1,3 +1,6 @@
+//GOLDILOCKS createInterval.java
+//GOLDILOCKS 전용 메소드로, INTERVAL 데이터타입을 생성하고 handling한다.
+
 import java.sql.*;
 import javax.sql.*;
 import sunje.goldilocks.jdbc.*;

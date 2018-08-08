@@ -1,3 +1,6 @@
+//getDefaultTransactionIsolation_test.java
+//DBMS의 Default Transaction Isolation level을 출력하는 메소드
+
 import java.sql.*;
 import javax.sql.*;
 

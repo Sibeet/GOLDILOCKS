@@ -1,3 +1,6 @@
+//GOLDILOCKS JdbcSample.java
+//기본적인 CONNECT, CREATE, UPDATE, DELETE SAMPLECODE
+
 import java.sql.*;
 import javax.sql.*;
 
